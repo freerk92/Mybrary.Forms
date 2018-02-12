@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infrastructure:BasePage xmlns:infrastructure="clr-namespace:Mybrary.Pages;assembly=Mybrary" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:uiconfig="clr-namespace:Mybrary.Sources.Extensions;assembly=Mybrary" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:translation="clr-namespace:Mybrary.Core.Localization;assembly=Mybrary.Core" xmlns:views="clr-namespace:Mybrary.Views;assembly=Mybrary" x:Class="Mybrary.Pages.MybraryPage" NavigationPage.HasNavigationBar="false">
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <RelativeLayout BackgroundColor="{ x:Static uiconfig:UIConfig.MainAppColor}">
+            <StackLayout Orientation="Vertical" Spacing="10" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" IsVisible="true">
+                <Image Source="book" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" HeightRequest="150" />
+                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="6">
+                    <Frame IsClippedToBounds="true" CornerRadius="65" HeightRequest="90" WidthRequest="90" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" HasShadow="false" BackgroundColor="White">
+                        <StackLayout Spacing="0">
+                            <Image Source="BarcodeIcon" Scale="0.7" />
+                            <Label Text="{translation:Translate ScanBook}" TextColor="{x:Static uiconfig:UIConfig.MainAppColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ScanBarcode}" />
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+                                                        <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding ScanBarcode}" />
+                                </Frame.GestureRecognizers>
+                    </Frame>
+                    <Frame IsClippedToBounds="true" CornerRadius="65" HeightRequest="90" WidthRequest="90" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand" HasShadow="false" BackgroundColor="White">
+                        <StackLayout Spacing="0">
+                            <Image Source="ShelfIcon" />
+                            <Label Text="{translation:Translate BookList}" TextColor="{x:Static uiconfig:UIConfig.MainAppColor}" HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                            </Label>
+                        </StackLayout>
+                                                                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding OpenLibrary}" />
+                                </Frame.GestureRecognizers>
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+            <views:NNMBusyView IsBusy="{Binding IsBusy}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" />
+        </RelativeLayout>
+    </ContentPage.Content>
+</infrastructure:BasePage>

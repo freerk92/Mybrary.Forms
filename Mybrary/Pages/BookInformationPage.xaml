@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infrastructure:BasePage 
+    xmlns:infrastructure="clr-namespace:Mybrary.Pages;assembly=Mybrary" 
+    xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:translation="clr-namespace:Mybrary.Core.Localization;assembly=Mybrary.Core" xmlns:views="clr-namespace:Mybrary.Views;assembly=Mybrary" 
+    x:Class="Mybrary.Pages.BookInformationPage" xmlns:converters="clr-namespace:Mybrary.Converters;assembly=Mybrary" xmlns:uiconfig="clr-namespace:Mybrary.Sources.Extensions;assembly=Mybrary" Title="{translation:Translate InformationTitle}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="{translation:Translate Add}" Command="{Binding AddButtonTapped}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:Converter64BaseImageSource x:Key="Converter64BaseImageSource" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <RelativeLayout>
+            <StackLayout Spacing="0" Orientation="Vertical" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" IsVisible="true">
+                <StackLayout Padding="10">
+                <Image Source="{Binding Image, Converter={StaticResource Converter64BaseImageSource}}" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="206" WidthRequest="128" />
+                <Label Text="{translation:Translate BookOwned}" TextColor="#00cd00" IsVisible="{Binding OwnBook}" />
+                <Label Text="{translation:Translate AlternativeISBNOwned}" TextColor="#FFA500" IsVisible="{Binding AlternativeISBNOwned}" />
+                <Label Text="{translation:Translate Title}" HorizontalOptions="StartAndExpand" />
+                <Label Style="{StaticResource BlueDataLabel}" Text="{Binding Title}" HorizontalOptions="EndAndExpand" />
+                <Label Text="{translation:Translate Author}" HorizontalOptions="StartAndExpand" />
+                <Label Style="{StaticResource BlueDataLabel}" Text="{Binding Author}" HorizontalOptions="End" />
+                <Label Text="{translation:Translate Publisher}" HorizontalOptions="StartAndExpand" />
+                <Label Style="{StaticResource BlueDataLabel}" Text="{Binding Publisher}" HorizontalOptions="End" />
+                <Label Text="{translation:Translate Year}" HorizontalOptions="StartAndExpand" />
+                <Label Style="{StaticResource BlueDataLabel}" Text="{Binding Year}" HorizontalOptions="End" />
+                <Label Text="{translation:Translate Edition}" HorizontalOptions="StartAndExpand" />
+                <Label Style="{StaticResource BlueDataLabel}" Text="{Binding Edition}" HorizontalOptions="End" />
+                <Label Text="{translation:Translate Length}" HorizontalOptions="StartAndExpand" />
+                <Label Style="{StaticResource BlueDataLabel}" Text="{Binding Length}" HorizontalOptions="End" />
+                    </StackLayout>
+            </StackLayout>
+            <views:NNMBusyView IsBusy="{Binding IsBusy}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" />
+
+        </RelativeLayout>
+    </ContentPage.Content>
+</infrastructure:BasePage>

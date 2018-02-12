@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>2.0</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="BusyLabel" xml:space="preserve">
+        <value>Busy</value>
+    </data>
+    <data name="ScanBook" xml:space="preserve">
+        <value>Scan boek</value>
+    </data>
+    <data name="BookList" xml:space="preserve">
+        <value>Boekenkast</value>
+    </data>
+    <data name="WishList" xml:space="preserve">
+        <value>Wishlist</value>
+    </data>
+    <!-- BookInformation -->
+        <data name="Title" xml:space="preserve">
+        <value>Titel</value>
+    </data>
+        <data name="Author" xml:space="preserve">
+        <value>Auteur</value>
+    </data>
+        <data name="Publisher" xml:space="preserve">
+        <value>Uitgever</value>
+    </data>
+        <data name="Length" xml:space="preserve">
+        <value>Lengte</value>
+    </data>
+        <data name="Year" xml:space="preserve">
+        <value>Jaar</value>
+    </data>
+        <data name="Edition" xml:space="preserve">
+        <value>Editie</value>
+    </data>
+    <data name="BookOwned" xml:space="preserve">
+        <value>U heeft dit boek al in uw bezit</value>
+    </data>
+    <data name="AlternativeISBNOwned" xml:space="preserve">
+        <value>U heeft een andere versie van dit boek</value>
+    </data>
+        <data name="ToggleTorch" xml:space="preserve">
+        <value>Flitser</value>
+    </data>
+    <data name="InformationTitle" xml:space="preserve">
+        <value>Informatie</value>
+    </data>
+        <data name="Owned" xml:space="preserve">
+        <value>Toevoegen aan boekenkast</value>
+    </data>
+        <data name="Want" xml:space="preserve">
+        <value>Toevoegen aan wishlist</value>
+    </data>
+            <data name="Add" xml:space="preserve">
+        <value>Toevoegen</value>
+    </data>
+    <data name="SelectOption" xml:space="preserve">
+        <value>Selecteer een optie</value>
+    </data>
+    <data name="Cancel" xml:space="preserve">
+        <value>Annuleren</value>
+    </data>
+    <data name="ErrorInternetTitle" xml:space="preserve">
+        <value>Geen internet</value>
+    </data>
+    <data name="ErrorInternetMessage" xml:space="preserve">
+        <value>Om te kunnen zoeken heeft u een internet verbinding nodig.</value>
+    </data>
+    <data name="BasicError" xml:space="preserve">
+        <value>Error</value>
+    </data>
+    <data name="BasicErrorMessage" xml:space="preserve">
+        <value>Er ging iets mis, probeer het later nog eens</value>
+    </data>
+    <data name="NoInternetErrorTryAgain" xml:space="preserve">
+        <value>U bent niet verbonden met het internet, probeer het later nog eens</value>
+    </data>
+</root>

@@ -1,0 +1,50 @@
+﻿<Properties StartupConfiguration="{2894F0C4-3409-4D44-844A-5E619EC6ABCF}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Mybrary.Core/ViewModels/BookInformationViewModel.cs">
+    <Files>
+      <File FileName="Mybrary.Core/ViewModels/MybraryViewModel.cs" Line="24" Column="10" />
+      <File FileName="Mybrary/App.xaml.cs" Line="30" Column="29" />
+      <File FileName="Mybrary/Pages/LibraryPage.xaml" Line="24" Column="57" />
+      <File FileName="Mybrary.Core/ViewModels/LibraryViewModel.cs" Line="24" Column="54" />
+      <File FileName="Mybrary.Core/Logic/LibraryLogic.cs" Line="39" Column="10" />
+      <File FileName="Mybrary.Core/DataAcces/LocalDataContext.cs" Line="37" Column="37" />
+      <File FileName="Mybrary/Pages/BookInformationPage.xaml" Line="11" Column="1" />
+      <File FileName="Mybrary/Pages/MybraryPage.xaml" Line="32" Column="88" />
+      <File FileName="Droid/MainApplication.cs" Line="1" Column="1" />
+      <File FileName="Droid/MainActivity.cs" Line="24" Column="64" />
+      <File FileName="iOS/AppDelegate.cs" Line="18" Column="40" />
+      <File FileName="Mybrary.Core/ViewModels/BookInformationViewModel.cs" Line="25" Column="9" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Mybrary" expanded="True">
+            <Node name="Mybrary" expanded="True">
+              <Node name="Pages" expanded="True" />
+              <Node name="App.xaml" expanded="True" />
+            </Node>
+            <Node name="Mybrary.Core" expanded="True">
+              <Node name="DataAcces" expanded="True" />
+              <Node name="ViewModels" expanded="True">
+                <Node name="BookInformationViewModel.cs" selected="True" />
+              </Node>
+            </Node>
+            <Node name="Mybrary.Droid" expanded="True" />
+            <Node name="Mybrary.iOS" expanded="True">
+              <Node name="Packages" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Mybrary.Droid PreferredExecutionTarget="Android.AVD" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Mybrary.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.41D89CDD-6034-42A0-A8C3-CCAFA7A8E03B" automaticSigning="False">
+    <MonoDevelop.MacDev.AppleDevelopmentTeam />
+  </MonoDevelop.Ide.ItemProperties.Mybrary.iOS>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+</Properties>

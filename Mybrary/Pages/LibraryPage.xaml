@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<infrastructure:BasePage xmlns:converters="clr-namespace:Mybrary.Converters;assembly=Mybrary" xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:infrastructure="clr-namespace:Mybrary.Pages;assembly=Mybrary" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:translation="clr-namespace:Mybrary.Core.Localization;assembly=Mybrary.Core" xmlns:views="clr-namespace:Mybrary.Views;assembly=Mybrary" x:Class="Mybrary.Pages.LibraryPage">
+	<ContentPage.ToolbarItems>
+	</ContentPage.ToolbarItems>
+	<ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:Converter64BaseImageSource x:Key="Converter64BaseImageSource" />
+        </ResourceDictionary>
+	</ContentPage.Resources>
+	<ContentPage.Content>
+		<RelativeLayout>
+			<StackLayout Orientation="Vertical" Spacing="0" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" IsVisible="true">
+                <ListView RowHeight="70" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ItemsSource="{Binding LibraryList}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell Height="70">
+                                <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Spacing="0">
+                                    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Fuchsia">
+                                        <ff:CachedImage Source="{Binding Image, Converter={StaticResource Converter64BaseImageSource}}" Aspect="AspectFill" ErrorPlaceholder="EmptyImage" BackgroundColor="Lime" />
+                                    </StackLayout>
+<!--                                    <Image Source="{Binding Image, Converter={StaticResource Converter64BaseImageSource}}" Aspect="AspectFit" />-->
+                                    <StackLayout HorizontalOptions="StartAndExpand" Spacing="3" BackgroundColor="Aqua">
+                                        <Label Text="{Binding Title}"/>
+                                        <Label Text="{Binding Author}"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                    <ListView.Footer>
+                        <Label />
+                    </ListView.Footer>
+                </ListView>
+            </StackLayout>
+			<views:NNMBusyView IsBusy="{Binding IsBusy}" RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}" RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}" />
+		</RelativeLayout>
+	</ContentPage.Content>
+</infrastructure:BasePage>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    x:Class="Mybrary.App"
+    xmlns:uiconfig="clr-namespace:Mybrary.Sources.Extensions;assembly=Mybrary">
+	<Application.Resources>
+		<!-- Application resource dictionary -->
+		<ResourceDictionary>
+            <Style x:Key="BlueDataLabel" TargetType="Label">
+                <Setter Property="FontSize" Value="16" />
+                <Setter Property="TextColor" Value="{x:Static uiconfig:UIConfig.MainAppColor}" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>
