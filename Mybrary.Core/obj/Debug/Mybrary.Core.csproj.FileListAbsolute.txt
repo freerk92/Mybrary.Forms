@@ -46,9 +46,9 @@
 /Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/bin/Debug/FFImageLoading.Platform.xml
 /Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/bin/Debug/FFImageLoading.Forms.pdb
 /Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/bin/Debug/FFImageLoading.Forms.xml
+/Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/obj/Debug/Mybrary.Core.csprojResolveAssemblyReference.cache
 /Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/obj/Debug/Mybrary.Core.Resources.AppResources.resources
 /Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/obj/Debug/Mybrary.Core.csproj.GenerateResource.Cache
 /Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/obj/Debug/Mybrary.Core.csproj.CoreCompileInputs.cache
 /Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/obj/Debug/Mybrary.Core.dll
 /Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/obj/Debug/Mybrary.Core.pdb
-/Users/freerkcuperus/Projects/Mybrary/Mybrary.Core/obj/Debug/Mybrary.Core.csprojResolveAssemblyReference.cache

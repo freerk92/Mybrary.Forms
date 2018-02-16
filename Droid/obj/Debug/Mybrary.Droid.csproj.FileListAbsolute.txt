@@ -1,6 +1,3 @@
-/Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/Mybrary.Droid.csprojResolveAssemblyReference.cache
-/Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Exif.dll
-/Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/Mybrary.Droid.csproj.CoreCompileInputs.cache
 /Users/freerkcuperus/Projects/Mybrary/Droid/bin/Debug/Mybrary.Droid.dll
 /Users/freerkcuperus/Projects/Mybrary/Droid/bin/Debug/Mybrary.Droid.pdb
 /Users/freerkcuperus/Projects/Mybrary/Droid/bin/Debug/com.companyname.Mybrary.apk
@@ -109,6 +106,9 @@
 /Users/freerkcuperus/Projects/Mybrary/Droid/bin/Debug/FFImageLoading.Forms.xml
 /Users/freerkcuperus/Projects/Mybrary/Droid/bin/Debug/FFImageLoading.Forms.Droid.pdb
 /Users/freerkcuperus/Projects/Mybrary/Droid/bin/Debug/FFImageLoading.Forms.Droid.xml
+/Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/Mybrary.Droid.csprojResolveAssemblyReference.cache
+/Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/XbdMerge/Xamarin.Android.Support.Exif.dll
+/Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/Mybrary.Droid.csproj.CoreCompileInputs.cache
 /Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/Mybrary.Droid.dll
 /Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/Mybrary.Droid.pdb
 /Users/freerkcuperus/Projects/Mybrary/Droid/obj/Debug/android/bin/com.companyname.Mybrary.apk

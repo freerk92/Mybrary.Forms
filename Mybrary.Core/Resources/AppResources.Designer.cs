@@ -190,5 +190,11 @@ namespace Mybrary.Core.Resources {
                 return ResourceManager.GetString("NoInternetErrorTryAgain", resourceCulture);
             }
         }
+        
+        internal static string Delete {
+            get {
+                return ResourceManager.GetString("Delete", resourceCulture);
+            }
+        }
     }
 }

@@ -64,32 +64,19 @@ namespace Mybrary.Core.DataAcces
             return result == 1;
         }
 
-        //public Task<List<TodoItem>> GetItemsNotDoneAsync()
-        //{
-        //    return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-        //}
+        /// <summary>
+        /// Deletes the given <paramref name="mappedTypeInstance"/> from the internal database.
+        /// </summary>
+        /// <typeparam name="TMappedType">The <see cref="Type"/> of the mapped object type.</typeparam>
+        /// <param name="mappedTypeInstance">The mapped type instance.</param>
+        /// <returns>A boolean value that indicates whether the action succeeded.</returns>
+        public virtual bool DeleteMappedObject<TMappedType>(TMappedType mappedTypeInstance)
+        {
+            int numberOfRowsAffected = database.Delete(mappedTypeInstance);
 
-        //public Task<TodoItem> GetItemAsync(int id)
-        //{
-        //    return database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
-        //}
+            return numberOfRowsAffected == 1;
+        }
 
-        //public Task<int> SaveItemAsync(TodoItem item)
-        //{
-        //    if (item.ID != 0)
-        //    {
-        //        return database.UpdateAsync(item);
-        //    }
-        //    else
-        //    {
-        //        return database.InsertAsync(item);
-        //    }
-        //}
-
-        //public Task<int> DeleteItemAsync(TodoItem item)
-        //{
-        //    return database.DeleteAsync(item);
-        //}
 
 
         #endregion

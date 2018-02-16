@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<infrastructure:BasePage xmlns:converters="clr-namespace:Mybrary.Converters;assembly=Mybrary" xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:infrastructure="clr-namespace:Mybrary.Pages;assembly=Mybrary" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:translation="clr-namespace:Mybrary.Core.Localization;assembly=Mybrary.Core" xmlns:views="clr-namespace:Mybrary.Views;assembly=Mybrary" x:Class="Mybrary.Pages.LibraryPage">
+<infrastructure:BasePage x:Name="LibraryPage" xmlns:converters="clr-namespace:Mybrary.Converters;assembly=Mybrary" xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" xmlns:infrastructure="clr-namespace:Mybrary.Pages;assembly=Mybrary" xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:translation="clr-namespace:Mybrary.Core.Localization;assembly=Mybrary.Core" xmlns:views="clr-namespace:Mybrary.Views;assembly=Mybrary" x:Class="Mybrary.Pages.LibraryPage">
 	<ContentPage.ToolbarItems>
 	</ContentPage.ToolbarItems>
 	<ContentPage.Resources>
@@ -14,16 +14,21 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell Height="70">
-                                <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Spacing="0">
-                                    <StackLayout HorizontalOptions="StartAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Fuchsia">
-                                        <ff:CachedImage Source="{Binding Image, Converter={StaticResource Converter64BaseImageSource}}" Aspect="AspectFill" ErrorPlaceholder="EmptyImage" BackgroundColor="Lime" />
-                                    </StackLayout>
-<!--                                    <Image Source="{Binding Image, Converter={StaticResource Converter64BaseImageSource}}" Aspect="AspectFit" />-->
-                                    <StackLayout HorizontalOptions="StartAndExpand" Spacing="3" BackgroundColor="Aqua">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="1*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <ff:CachedImage Grid.Column="0" Source="{Binding Image, Converter={StaticResource Converter64BaseImageSource}}" Aspect="AspectFit" ErrorPlaceholder="EmptyImage" />
+                                    <StackLayout Grid.Column="1" HorizontalOptions="StartAndExpand" Spacing="3">
                                         <Label Text="{Binding Title}"/>
                                         <Label Text="{Binding Author}"/>
                                     </StackLayout>
-                                </StackLayout>
+                                </Grid>
+                            <ViewCell.ContextActions>
+<!--                                <MenuItem Command="{Binding Source={x:Reference CarbCounterPage}, Path=BindingContext.EditItem}" CommandParameter="{Binding .}" Text="{translation:Translate Edit}" />-->
+                                <MenuItem Command="{Binding Source={x:Reference LibraryPage}, Path=BindingContext.DeleteItem}" CommandParameter="{Binding .}" Text="{translation:Translate Delete}" IsDestructive="True" />
+                            </ViewCell.ContextActions>
                             </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>

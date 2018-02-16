@@ -40,6 +40,27 @@ namespace Mybrary.Core.Logic
             return DataContext.GetBooks();
         }
 
+        public async Task RemoveBookFromLibrary(BookEntity entity)
+        {
+            if (entity == null)
+                throw new ArgumentNullException(nameof(entity));
+
+            try
+            {
+                DataContext.DeleteMappedObject<BookEntity>(entity);
+            }
+            catch (LogicException ex)
+            {
+                throw new LogicException(ex.Title, ex.Message);
+            }
+            catch (Exception e)
+            {
+                throw new LogicException("Error", "error");
+                //throw new LogicException(Translator.Get("ServiceError"), Translator.Get("TryAgainLater"));
+            }
+        }
+
+
         public bool FindIsbn(string isbn){
             return DataContext.FindIsbn(isbn);
         }

@@ -85,4 +85,7 @@
     <data name="NoInternetErrorTryAgain" xml:space="preserve">
         <value>U bent niet verbonden met het internet, probeer het later nog eens</value>
     </data>
+    <data name="Delete" xml:space="preserve">
+        <value>Verwijderen</value>
+    </data>
 </root>
